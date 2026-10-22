@@ -68,5 +68,5 @@ navigationLinks.forEach(function (link) {
 
 
 console.log(
-    "Ezaz Portfolio Phase 02 loaded successfully."
+    "Ezaz Portfolio Phase 03 loaded successfully."
 );
