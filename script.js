@@ -1,13 +1,13 @@
 // =========================================
 // Md. Ezaz Mahmud Portfolio
-// Main JavaScript File
+// Phase 09 — JavaScript Interactions
 // =========================================
 
 "use strict";
 
 
 // =========================================
-// MOBILE NAVIGATION
+// ELEMENTS
 // =========================================
 
 const menuToggle =
@@ -16,69 +16,314 @@ const menuToggle =
 const navLinks =
     document.getElementById("nav-links");
 
-
-menuToggle.addEventListener("click", function () {
-
-    navLinks.classList.toggle("show");
-
-    const isOpen =
-        navLinks.classList.contains("show");
-
-
-    menuToggle.setAttribute(
-        "aria-expanded",
-        isOpen
-    );
-
-
-    menuToggle.innerHTML =
-        isOpen
-            ? '<i class="fa-solid fa-xmark"></i>'
-            : '<i class="fa-solid fa-bars"></i>';
-
-});
-
-
-// =========================================
-// CLOSE MOBILE MENU AFTER CLICKING LINK
-// =========================================
-
 const navigationLinks =
     document.querySelectorAll(".nav-link");
 
+const sections =
+    document.querySelectorAll("main section[id]");
 
-navigationLinks.forEach(function (link) {
+const siteHeader =
+    document.getElementById("site-header");
 
-    link.addEventListener("click", function () {
+const scrollTopButton =
+    document.getElementById("scroll-top");
 
-        navLinks.classList.remove("show");
+const revealElements =
+    document.querySelectorAll(".reveal");
 
-        menuToggle.setAttribute(
-            "aria-expanded",
-            "false"
+
+// =========================================
+// MOBILE NAVIGATION
+// =========================================
+
+function openMobileMenu() {
+
+    navLinks.classList.add("show");
+
+    menuToggle.setAttribute(
+        "aria-expanded",
+        "true"
+    );
+
+    menuToggle.innerHTML =
+        '<i class="fa-solid fa-xmark"></i>';
+
+}
+
+
+function closeMobileMenu() {
+
+    navLinks.classList.remove("show");
+
+    menuToggle.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+
+    menuToggle.innerHTML =
+        '<i class="fa-solid fa-bars"></i>';
+
+}
+
+
+menuToggle.addEventListener(
+    "click",
+    function () {
+
+        const isOpen =
+            navLinks.classList.contains("show");
+
+        if (isOpen) {
+
+            closeMobileMenu();
+
+        } else {
+
+            openMobileMenu();
+
+        }
+
+    }
+);
+
+
+// =========================================
+// CLOSE MENU AFTER NAV LINK CLICK
+// =========================================
+
+navigationLinks.forEach(
+    function (link) {
+
+        link.addEventListener(
+            "click",
+            function () {
+
+                closeMobileMenu();
+
+            }
         );
 
-
-        menuToggle.innerHTML =
-            '<i class="fa-solid fa-bars"></i>';
-
-    });
-
-});
-
-
-console.log(
-    "Ezaz Portfolio Phase 04 loaded successfully."
+    }
 );
-console.log(
-    "Ezaz Portfolio Phase 05 loaded successfully."
+
+
+// =========================================
+// CLOSE MENU WHEN WINDOW BECOMES DESKTOP
+// =========================================
+
+window.addEventListener(
+    "resize",
+    function () {
+
+        if (window.innerWidth > 768) {
+
+            closeMobileMenu();
+
+        }
+
+    }
 );
-console.log(
-    "Ezaz Portfolio Phase 06 loaded successfully."
+
+
+// =========================================
+// ACTIVE NAVIGATION LINK
+// =========================================
+
+function updateActiveNavigation() {
+
+    const scrollPosition =
+        window.scrollY + 160;
+
+    sections.forEach(
+        function (section) {
+
+            const sectionTop =
+                section.offsetTop;
+
+            const sectionHeight =
+                section.offsetHeight;
+
+            const sectionId =
+                section.getAttribute("id");
+
+            if (
+                scrollPosition >= sectionTop &&
+                scrollPosition <
+                sectionTop + sectionHeight
+            ) {
+
+                navigationLinks.forEach(
+                    function (link) {
+
+                        link.classList.remove(
+                            "active"
+                        );
+
+                    }
+                );
+
+
+                const currentLink =
+                    document.querySelector(
+                        '.nav-link[href="#' +
+                        sectionId +
+                        '"]'
+                    );
+
+
+                if (currentLink) {
+
+                    currentLink.classList.add(
+                        "active"
+                    );
+
+                }
+
+            }
+
+        }
+    );
+
+}
+
+
+// =========================================
+// HEADER SCROLL EFFECT
+// =========================================
+
+function updateHeader() {
+
+    if (window.scrollY > 20) {
+
+        siteHeader.classList.add(
+            "scrolled"
+        );
+
+    } else {
+
+        siteHeader.classList.remove(
+            "scrolled"
+        );
+
+    }
+
+}
+
+
+// =========================================
+// SCROLL TO TOP BUTTON
+// =========================================
+
+function updateScrollTopButton() {
+
+    if (window.scrollY > 500) {
+
+        scrollTopButton.classList.add(
+            "show"
+        );
+
+    } else {
+
+        scrollTopButton.classList.remove(
+            "show"
+        );
+
+    }
+
+}
+
+
+scrollTopButton.addEventListener(
+    "click",
+    function () {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    }
 );
-console.log(
-    "Ezaz Portfolio Phase 07 loaded successfully."
+
+
+// =========================================
+// SCROLL REVEAL ANIMATION
+// =========================================
+
+const revealObserver =
+    new IntersectionObserver(
+
+        function (entries, observer) {
+
+            entries.forEach(
+                function (entry) {
+
+                    if (
+                        entry.isIntersecting
+                    ) {
+
+                        entry.target.classList.add(
+                            "visible"
+                        );
+
+                        observer.unobserve(
+                            entry.target
+                        );
+
+                    }
+
+                }
+            );
+
+        },
+
+        {
+            threshold: 0.12
+        }
+
+    );
+
+
+revealElements.forEach(
+    function (element) {
+
+        revealObserver.observe(
+            element
+        );
+
+    }
 );
+
+
+// =========================================
+// GLOBAL SCROLL EVENT
+// =========================================
+
+window.addEventListener(
+    "scroll",
+    function () {
+
+        updateActiveNavigation();
+
+        updateHeader();
+
+        updateScrollTopButton();
+
+    }
+);
+
+
+// =========================================
+// INITIAL PAGE LOAD
+// =========================================
+
+updateActiveNavigation();
+
+updateHeader();
+
+updateScrollTopButton();
+
+
 console.log(
-    "Ezaz Portfolio Phase 08 loaded successfully."
+    "Ezaz Portfolio Phase 09 loaded successfully."
 );
