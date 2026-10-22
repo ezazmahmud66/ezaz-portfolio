@@ -1945,6 +1945,386 @@ body {
 
 }
 
+/* =========================================
+   CERTIFICATIONS & COURSES SECTION
+   ========================================= */
+
+.certifications-section {
+
+    padding: 100px 0;
+
+    background:
+        var(--white);
+
+}
+
+
+/* =========================================
+   CERTIFICATIONS GRID
+   ========================================= */
+
+.certifications-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+
+}
+
+
+/* =========================================
+   CERTIFICATE CARD
+   ========================================= */
+
+.certificate-card {
+
+    min-height: 330px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 25px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        var(--light);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 16px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+
+}
+
+
+.certificate-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    border-color:
+        #bfdbfe;
+
+    box-shadow:
+        0 14px 30px
+        rgba(15, 23, 42, 0.08);
+
+}
+
+
+/* Top Accent */
+
+.certificate-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 4px;
+
+    background:
+        var(--primary);
+
+    transform:
+        scaleX(0);
+
+    transform-origin:
+        left;
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+.certificate-card:hover::before {
+
+    transform:
+        scaleX(1);
+
+}
+
+
+/* =========================================
+   FEATURED DATA CERTIFICATES
+   ========================================= */
+
+.featured-certificate {
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff 0%,
+            #f8fafc 100%
+        );
+
+    border-color:
+        #bfdbfe;
+
+}
+
+
+/* =========================================
+   CERTIFICATE TOP
+   ========================================= */
+
+.certificate-top {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.certificate-icon {
+
+    width: 52px;
+
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    background:
+        var(--light-blue);
+
+    color:
+        var(--primary);
+
+    font-size: 1.3rem;
+
+}
+
+
+.certificate-date {
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    background:
+        var(--white);
+
+    border:
+        1px solid var(--border);
+
+    color:
+        var(--muted);
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+}
+
+
+/* =========================================
+   CERTIFICATE CONTENT
+   ========================================= */
+
+.certificate-content {
+
+    flex: 1;
+
+}
+
+
+.certificate-platform {
+
+    margin-bottom: 6px;
+
+    color:
+        var(--primary);
+
+    font-size: 0.8rem;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.7px;
+
+}
+
+
+.certificate-content h3 {
+
+    margin-bottom: 12px;
+
+    color:
+        var(--dark);
+
+    font-size: 1.1rem;
+
+    line-height: 1.4;
+
+}
+
+
+.certificate-description {
+
+    color:
+        var(--muted);
+
+    font-size: 0.9rem;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================
+   CERTIFICATE FOOTER
+   ========================================= */
+
+.certificate-footer {
+
+    margin-top: 24px;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid var(--border);
+
+}
+
+
+.certificate-link {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color:
+        var(--primary);
+
+    text-decoration: none;
+
+    font-size: 0.88rem;
+
+    font-weight: 700;
+
+    transition:
+        gap 0.25s ease,
+        color 0.25s ease;
+
+}
+
+
+.certificate-link:hover {
+
+    gap: 11px;
+
+    color:
+        var(--primary-dark);
+
+}
+
+
+/* =========================================
+   CERTIFICATION RESPONSIVE
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+    .certifications-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .certifications-section {
+
+        padding: 75px 0;
+
+    }
+
+
+    .certificate-card {
+
+        min-height: auto;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .certifications-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .certifications-section {
+
+        padding: 60px 0;
+
+    }
+
+
+    .certificate-card {
+
+        padding: 22px;
+
+    }
+
+
+    .certificate-top {
+
+        align-items: flex-start;
+
+    }
+
+}
 
 /* =========================================
    PLACEHOLDER SECTIONS
