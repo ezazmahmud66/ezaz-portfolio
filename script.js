@@ -76,3 +76,6 @@ console.log(
 console.log(
     "Ezaz Portfolio Phase 06 loaded successfully."
 );
+console.log(
+    "Ezaz Portfolio Phase 07 loaded successfully."
+);
