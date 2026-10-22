@@ -1,42 +1,82 @@
-# Md. Ezaz Mahmud — Portfolio
+# Md. Ezaz Mahmud — Personal Portfolio
 
-Personal portfolio website of Md. Ezaz Mahmud, a Computer Science and Engineering student at East West University with a focus on Data Analytics.
+A responsive personal portfolio website showcasing my education, technical skills, data analytics projects, certifications, leadership activities, and contact information.
 
-## Portfolio Focus
+## Live Portfolio
 
-- Data Analytics
+Visit my portfolio:
+
+https://ezazmahmud66.github.io/ezaz-portfolio/
+
+## About
+
+I am a Computer Science and Engineering student at East West University with a strong interest in Data Analytics, programming, problem-solving, and data-driven decision-making.
+
+## Featured Projects
+
+### Telecom Churn Decision Framework
+
+A decision-oriented telecom churn prediction framework using class-imbalance handling, threshold optimization, and explainable AI.
+
+Key results:
+
+- Evaluated 5 machine learning models across 4 imbalance strategies
+- Used stratified 5-fold cross-validation
+- Improved recall from 53.2% to 86.1%
+- Reduced false negatives from 175 to 52
+- Used XGBoost, LightGBM, SHAP, Scikit-learn, Pandas, and Python
+
+### TaskHub
+
+A terminal-based task management application developed using Ruby with persistent JSON storage.
+
+Key features:
+
+- CRUD operations
+- JSON-based persistent storage
+- File I/O
+- Object-Oriented Programming
+
+## Technical Skills
+
 - Python
+- Java
+- Ruby
 - SQL
-- Data Cleaning
+- Pandas
+- NumPy
+- Statistics
 - Exploratory Data Analysis
-- Data Visualization
-- Machine Learning
+- Data Cleaning
+- Matplotlib
+- Seaborn
+- Advanced Excel
+- Git
+- GitHub
+- VS Code
 
 ## Technologies Used
 
 - HTML5
 - CSS3
 - JavaScript
+- Font Awesome
 - Git
 - GitHub
+- GitHub Pages
 
-## Development Status
+## Contact
 
-The portfolio is currently under development.
-
-## Planned Sections
-
-- Home
-- About
-- Education
-- Technical Skills
-- Projects
-- Certifications
-- Leadership & Activities
-- Contact
-
-## Author
-
-Md. Ezaz Mahmud
+Email: ezaz.mahmudewu@gmail.com
 
 GitHub: https://github.com/ezazmahmud66
+
+Location: Dhaka, Bangladesh
+
+## Deployment
+
+This portfolio is deployed using GitHub Pages.
+
+Live Website:
+
+https://ezazmahmud66.github.io/ezaz-portfolio/
