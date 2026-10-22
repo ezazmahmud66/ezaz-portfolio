@@ -15,35 +15,294 @@
 
     <title>Md. Ezaz Mahmud | Data Analyst Portfolio</title>
 
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>Md. Ezaz Mahmud</h1>
-        <p>Aspiring Data Analyst | CSE Student</p>
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header class="site-header">
+
+        <nav class="navbar container">
+
+            <a href="#home" class="logo">
+                Ezaz<span>.</span>
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menu-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+
+                <li>
+                    <a href="#home" class="nav-link active">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#about" class="nav-link">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#skills" class="nav-link">
+                        Skills
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#projects" class="nav-link">
+                        Projects
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#certifications" class="nav-link">
+                        Certifications
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#activities" class="nav-link">
+                        Activities
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact" class="nav-link">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
     </header>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
 
     <main>
 
-        <!-- Hero Section -->
-        <section id="home">
-            <h2>Portfolio Under Development</h2>
+        <!-- =========================
+             HERO SECTION
+        ========================== -->
 
-            <p>
-                Welcome to my personal portfolio. This website is currently
-                being developed to showcase my skills, projects,
-                certifications, and professional activities.
-            </p>
+        <section class="hero" id="home">
+
+            <div class="container hero-container">
+
+                <div class="hero-content">
+
+                    <p class="hero-intro">
+                        Hello, I'm
+                    </p>
+
+                    <h1>
+                        Md. Ezaz Mahmud
+                    </h1>
+
+                    <h2>
+                        Aspiring Data Analyst
+                        <span>| CSE Student</span>
+                    </h2>
+
+                    <p class="hero-description">
+                        I am a Computer Science and Engineering student with
+                        a strong interest in data analytics, problem-solving,
+                        and data-driven decision-making. I enjoy working with
+                        Python, SQL, data cleaning, exploratory data analysis,
+                        visualization, and machine learning to transform data
+                        into meaningful insights.
+                    </p>
+
+
+                    <!-- HERO BUTTONS -->
+
+                    <div class="hero-buttons">
+
+                        <a href="#projects"
+                           class="btn btn-primary">
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                            View Projects
+                        </a>
+
+
+                        <a href="https://github.com/ezazmahmud66"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn btn-secondary">
+
+                            <i class="fa-brands fa-github"></i>
+
+                            GitHub
+                        </a>
+
+
+                        <a href="mailto:ezaz.mahmudewu@gmail.com"
+                           class="btn btn-outline">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            Contact Me
+                        </a>
+
+                    </div>
+
+
+                    <!-- SOCIAL LINKS -->
+
+                    <div class="hero-social">
+
+                        <a
+                            href="https://github.com/ezazmahmud66"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub">
+
+                            <i class="fa-brands fa-github"></i>
+
+                        </a>
+
+
+                        <a
+                            href="mailto:ezaz.mahmudewu@gmail.com"
+                            aria-label="Email">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HERO VISUAL -->
+
+                <div class="hero-visual">
+
+                    <div class="hero-card">
+
+                        <div class="hero-card-icon">
+                            <i class="fa-solid fa-chart-column"></i>
+                        </div>
+
+                        <h3>
+                            Data Analytics
+                        </h3>
+
+                        <p>
+                            Python • SQL • EDA • Visualization • Machine Learning
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PLACEHOLDER SECTIONS
+             These will be developed
+             in future phases.
+        ========================== -->
+
+        <section id="about" class="placeholder-section">
+            <div class="container">
+                <h2>About</h2>
+                <p>This section will be completed in Phase 03.</p>
+            </div>
+        </section>
+
+
+        <section id="skills" class="placeholder-section">
+            <div class="container">
+                <h2>Skills</h2>
+                <p>This section will be completed in Phase 04.</p>
+            </div>
+        </section>
+
+
+        <section id="projects" class="placeholder-section">
+            <div class="container">
+                <h2>Projects</h2>
+                <p>This section will be completed in Phase 05.</p>
+            </div>
+        </section>
+
+
+        <section id="certifications" class="placeholder-section">
+            <div class="container">
+                <h2>Certifications</h2>
+                <p>This section will be completed in Phase 06.</p>
+            </div>
+        </section>
+
+
+        <section id="activities" class="placeholder-section">
+            <div class="container">
+                <h2>Activities</h2>
+                <p>This section will be completed in Phase 07.</p>
+            </div>
+        </section>
+
+
+        <section id="contact" class="placeholder-section">
+            <div class="container">
+                <h2>Contact</h2>
+                <p>This section will be completed in Phase 08.</p>
+            </div>
         </section>
 
     </main>
 
-    <footer>
-        <p>&copy; 2026 Md. Ezaz Mahmud</p>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <p>
+                &copy; 2026 Md. Ezaz Mahmud.
+                All Rights Reserved.
+            </p>
+
+        </div>
+
     </footer>
 
+
+    <!-- Main JavaScript -->
     <script src="script.js"></script>
 
 </body>
