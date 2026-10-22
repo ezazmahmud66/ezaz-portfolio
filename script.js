@@ -325,5 +325,5 @@ updateScrollTopButton();
 
 
 console.log(
-    "Ezaz Portfolio Phase 10 loaded successfully."
+    "Ezaz Portfolio Phase 11 loaded successfully."
 );

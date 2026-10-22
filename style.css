@@ -439,6 +439,35 @@ section {
         2px solid var(--dark);
 }
 
+/* =========================================
+   RESUME BUTTON
+   ========================================= */
+
+.btn-resume {
+
+    background:
+        var(--dark);
+
+    color:
+        var(--white);
+
+    border:
+        2px solid var(--dark);
+
+}
+
+
+.btn-resume:hover {
+
+    background:
+        #1e293b;
+
+    box-shadow:
+        0 8px 20px
+        rgba(15, 23, 42, 0.20);
+
+}
+
 
 .btn-outline {
     background:
