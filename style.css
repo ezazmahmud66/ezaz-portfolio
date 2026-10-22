@@ -2996,3 +2996,179 @@ button:focus-visible {
     }
 
 }
+
+/* =========================================
+   PHASE 12 — ACCESSIBILITY & FINAL POLISH
+   ========================================= */
+
+
+/* =========================================
+   SKIP LINK
+   ========================================= */
+
+.skip-link {
+
+    position: fixed;
+
+    top: 10px;
+    left: 10px;
+
+    z-index: 9999;
+
+    padding: 10px 16px;
+
+    border-radius: 8px;
+
+    background:
+        var(--dark);
+
+    color:
+        var(--white);
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transform:
+        translateY(-150%);
+
+    transition:
+        transform 0.2s ease;
+
+}
+
+
+.skip-link:focus {
+
+    transform:
+        translateY(0);
+
+}
+
+
+/* =========================================
+   BETTER FOCUS STATES
+   ========================================= */
+
+a:focus-visible,
+button:focus-visible {
+
+    outline:
+        3px solid rgba(37, 99, 235, 0.45);
+
+    outline-offset: 4px;
+
+    border-radius: 6px;
+
+}
+
+
+/* =========================================
+   IMPROVED TEXT SELECTION
+   ========================================= */
+
+::selection {
+
+    background:
+        var(--primary);
+
+    color:
+        var(--white);
+
+}
+
+
+/* =========================================
+   BETTER LINK INTERACTION
+   ========================================= */
+
+a {
+
+    text-underline-offset: 3px;
+
+}
+
+
+/* =========================================
+   FOOTER FINAL POLISH
+   ========================================= */
+
+.footer-note {
+
+    margin-top: 6px;
+
+    color:
+        #94a3b8;
+
+    font-size: 0.78rem;
+
+}
+
+
+/* =========================================
+   ACCESSIBLE TOUCH TARGETS
+   ========================================= */
+
+.nav-link,
+.social-link,
+.project-btn,
+.certificate-link,
+.contact-main-btn {
+
+    min-height: 44px;
+
+}
+
+
+/* =========================================
+   MOBILE TEXT SAFETY
+   ========================================= */
+
+.hero-description,
+.section-description,
+.project-description,
+.certificate-description,
+.impact-description,
+.contact-value {
+
+    overflow-wrap: anywhere;
+
+}
+
+
+/* =========================================
+   PRINT / PDF FRIENDLY
+   ========================================= */
+
+@media print {
+
+    .site-header,
+    .scroll-top,
+    .menu-toggle,
+    .hero-buttons,
+    .hero-social {
+
+        display: none !important;
+
+    }
+
+
+    body {
+
+        background:
+            var(--white);
+
+        color:
+            #000000;
+
+    }
+
+
+    section {
+
+        page-break-inside:
+            avoid;
+
+    }
+
+}

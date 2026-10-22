@@ -45,8 +45,13 @@ function openMobileMenu() {
         "true"
     );
 
+    menuToggle.setAttribute(
+        "aria-label",
+        "Close navigation menu"
+    );
+
     menuToggle.innerHTML =
-        '<i class="fa-solid fa-xmark"></i>';
+        '<i class="fa-solid fa-xmark" aria-hidden="true"></i>';
 
 }
 
@@ -60,8 +65,13 @@ function closeMobileMenu() {
         "false"
     );
 
+    menuToggle.setAttribute(
+        "aria-label",
+        "Open navigation menu"
+    );
+
     menuToggle.innerHTML =
-        '<i class="fa-solid fa-bars"></i>';
+        '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
 
 }
 
@@ -325,5 +335,5 @@ updateScrollTopButton();
 
 
 console.log(
-    "Ezaz Portfolio Phase 11 loaded successfully."
+    "Ezaz Portfolio Phase 10 loaded successfully."
 );
